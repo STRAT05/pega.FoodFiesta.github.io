@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/832a8ca770.js" crossorigin="anonymous"></script>
+        <title>FoodFiest: Savoring Culinary Delights with Every Click</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Food Fiesta</a>
+
+            <div class="search-box">
+            <input id="searchBar" class="search-bar" type="text" class="searchBar" placeholder="Search..." >
+            <button class="searchButton" id="searchButton" onclick="searchBtn()">Search</button>
+            </div>
+
+            <nav class="navbar">
+                <a href="#Home">Home</a>
+                <a href="#about">About</a>
+                <a href="#food">Items</a>
+                <!--<a href="#">Service</a>-->
+                <a href="#ct">Contact</a>
+            </nav>
+
+           
+
+            <div id="cart-container" class="cart-container">
+                <i class="fa-solid fa-cart-shopping" onclick="toggleCartDropdown()"></i>
+                <span id="cart-count" class="cart-count">0</span>
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <h2>Cart Items</h2>
+                    <ul id="cart-items">
+
+                    </ul>
+                    <div class="cart-summary">
+                        <p>Total Items: <span id="total-item">0</span></p>
+                        <p>Total Price: <span id="total-price">0</span></p>
+                        <button id="purchaseBtn" onclick="purchaseItems()">Purchase</button>
+                    </div>
+                </div>
+
+            </div>
+            
+        </header>
+
+        <div id="login" class="login">
+            <button onclick="loginFunc()">Login</button>
+        </div>
+
+        <div id="loginPrompt" class="login-prompt">
+
+            <input type="text" id="username" placeholder="Username...">
+            <input type="password" id="password" placeholder="Password:">
+            
+            <button class="loginBtn" onclick="loginBtnFunc()">Login</button>
+            <button class="loginCancelBtn" onclick="loginCancelBtnFunc()">Cancel</button>
+        </div>
+
+        <div id="register" class="register">
+            <button onclick="registerFunc()">Register</button>
+        </div>
+
+        <div id="registerPrompt">
+
+            <input type="text" id="rUsername" placeholder="username:">
+            <input type="password" id="rPassword" placeholder="password">
+            <input type="email" id="rEmail" placeholder="Email:">
+
+            <button class="reg-btn" onclick="registerBtnFunc()">Register</button>
+            <button class="reg-cancel-btn" onclick="regCancelBtnFunc()">Cancel</button>
+            <h1 class="reg-lbl">Food Fiesta</h1>
+        </div>
+
+        <div id="Home">
+            <h1>
+                Food Fiesta <br>
+                <span id="hSpan"> Savoring Culinary Delights with Every Click </span>
+            </h1>
+
+        </div>
+
+        
+
+        <div id="food">
+
+            <div class="item" id="basoy" data-name="Batchoy" data-price="250" data-img="images/basoy.jpg" >
+                
+                 <h1>Batchoy</h1>
+                 <img src="images/basoy.jpg">
+                 <p>
+                    PRICE: <strong>₱250.00</strong>
+                 </p>
+
+                 <div id="basoyDesc" class="item-description"> 
+                    <p>
+                        Batchoy is a soup dish composed of sliced pork, pig’s innards, and miki noodles.<br><br>
+                        This dish originated from the district of La Paz in Iloilo City — in the island of Panay.<br>
+                        Throughout the years, batchoy gained popularity and has been a favorite soup dish along with beef mami, beef pares, and bulalo.
+                    </p>
+
+                 </div>
+                 
+              
+                 <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="lechon" data-name="Lechon" data-price="5300" data-img="images/lechon.jpg">
+                
+                 <h1>Lechon</h1>
+                 <img src="images/lechon.jpg">
+                 <p>
+                    PRICE: <strong>₱5'300.00</strong>
+                 </p>
+
+                 <div id="lechonDesc" class="item-description"> 
+                    <p>
+                        Lechon, derived from a Spanish word for roasted suckling pig is one of the most popular dishes in the Philippines.<br><br>
+                        The slowly-roasted suckling pig is usually stuffed with lemongrass, tamarind, garlic,
+                        onions, and chives, and is then roasted on a large bamboo spit over an open fire.
+                    </p>
+                 </div>
+
+                 <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="menudo" data-name="Menudo" data-price="200" data-img="images/menudo.jpg">
+                
+                    <h1>Menudo</h1>
+                    <img src="images/menudo.jpg">
+                    <p>
+                        PRICE: <strong>₱200.00</strong>
+                    </p>
+                    <div id="menudoDesc" class="item-description"> 
+                    <p>
+                        <strong>Menudo</strong> is a traditional stew from the Philippines<br><br>
+                        made with pork and sliced liver in tomato sauce with carrots, onions, raisins, diced green bell pepper and potatoes.
+                    </p>
+                    </div>
+               
+                    
+                    <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+
+            <div class="item" id="kareKare" data-name="Kare Kare" data-price="300" data-img="images/kareKare.jpg">
+                
+                <h1>Kare Kare</h1>
+                <img src="images/kareKare.jpg">
+                <p>
+                    PRICE: <strong>₱300.00</strong>
+                </p>
+                <div id="kareKareDesc" class="item-description"> 
+                    <p>
+                        Kare Kare is a Filipino stew that features a thick savory peanut sauce.<br><br>
+                        it is made from a based of stewed oxtail, beef tripe, pork hocks, calves' feet, pig's feet or
+                        trotters, varius cuts of pork, beef stew meat, and offal. Vegetables such as eggplant, Chinese
+                        cabbage, and other greens, daikon, green beans, okra and aspharagus bea
+                    </p>
+                </div>
+           
+               
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="dinuguan" data-name="Dinuguan" data-price="215" data-img="images/dinuguan.jpg">
+                
+                <h1>Dinuguan</h1>
+                <img src="images/dinuguan.jpg">
+                <p>
+                    PRICE: <strong>₱220.00</strong>
+                </p>
+
+                <div id="dinuguanDesc" class="item-description"> 
+                    <p>
+                        Dinuguan is a Filipino savory stew made of pork offal (lungs, kidneys, intestines, ears, heart and snout)
+                         and meat simmered in a rich, spicy dark gravy of pig blood,
+                        garlic, siling haba, and vinegar.
+                    </p>
+                </div>
+                
+               
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="pancitBihon" data-name="Pancit Bihon" data-price="220" data-img="images/pancitBihon.jpg">
+                
+                <h1>Pancit Bihon</h1>
+                <img src="images/pancitBihon.jpg">
+                <p>
+                    PRICE: <strong>₱220.00</strong>
+                </p>
+
+                <div id="pancitBihonDesc" class="item-description"> 
+                    <p>
+                        Pancit Bihon or Pancit guisado is a Filipino dish that consists of noodles cooked with 
+                        soy sauce along with some variation of meats and vegetables.<br><br>
+                        this dish is composed of peanut oil, chicken breast, garlic, onions, Bihon noodles.
+                        As for the vegetables it is composed of green beans, carrots and cabbages.
+                        For the sauce it is made of a mixture of chicken stock, soy sauce, and oyster sauce. 
+
+                    </p>
+                </div>
+           
+                
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="sinigangSalmon" data-name="Sinigang na ulo ng Salmon" data-price="450" data-img="images/sinigangSalmon.jpg">
+                
+                <h1>Sinigang na ulo ng salmon</h1>
+                <img src="images/sinigangSalmon.jpg">
+                <p>
+                    PRICE: <strong>₱450.00</strong>
+                </p>
+                <div id="sinigangSalmonDesc" class="item-description"> 
+                    <p>
+                        Sinigang is a Filipino soup or stew that is characterized by its sour and savory taste.<br><br>
+                        this dish is composed of fresh salmon head, sampalok, sampalok mix, tomato, onion, fish sauce, and 1 liter of water. 
+                        
+                    </p>
+                </div>
+           
+                 
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="porkAdobo" data-name="Pork Adobo" data-price="225" data-img="images/porkAdobo.jpg">
+                
+                <h1>Pork Adobo</h1>
+                <img src="images/porkAdobo.jpg">
+                <p>
+                    PRICE: <strong>₱225.00</strong>
+                </p>
+                <div id="porkAdoboDesc" class="item-description"> 
+                    <p>
+                        Adobo is a popular Filipino dish and cooking process is Philippine Cuisine.
+                        in its base form, meat seafood, or vegetables are first browned in oil, and then
+                        marinated and simmered in vinegar, salt and soy sauce and garlic.<br><br> 
+                        It is a dish composed of pork slices cooked in soy sauce, vinegar, and garlic. 
+                    </p>
+                </div>
+           
+               
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="sisig" data-name="Pork Sisig" data-price="325" data-img="images/sisig.jpg">
+                
+                <h1>Pork Sisig</h1>
+                <img src="images/sisig.jpg">
+                <p>
+                    PRICE: <strong>₱325.00</strong>
+                </p>
+
+                <div id="sisigDesc" class="item-description"> 
+                    <p>
+                        Sisig is a Filipino dish made from pork jowl and ears, pork belly, and chicken liver,
+                        which is seasoned with calamansi, onions, and chili peppers.
+                    </p>
+                </div>
+           
+               
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="palabok" data-name="Palabok" data-price="275" data-img="images/palabok.jpg">
+                
+                <h1>Palabok</h1>
+                <img src="images/palabok.jpg">
+                <p>
+                    PRICE: <strong>₱275.00</strong>
+                </p>
+                <div id="palabokDesc" class="item-description"> 
+                    <p>
+                        Palabok or Pancit Palabok is a type of Filipino noodle dish that makes use of cornstarch sticks,
+                        which is also known as palabok noodles. It has an orange sauce composed of minced pork,
+                        tinapa flakes (or smoked fish flakes), and annatto water. topped with hard boiled egg wedges
+                        and shrimps
+                    </p>
+                </div>
+           
+               
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="shanghai" data-name="Lumpiang shanghai" data-price="200" data-img="images/shanghai.jpg">
+                
+                <h1>Lumpiang Shanghai</h1>
+                <img src="images/shanghai.jpg">
+                <p>
+                    PRICE: <strong>₱200.00</strong>
+                </p>
+
+                <div id="shanghaiDesc" class="item-description"> 
+                    <p>
+                        Lumpia or Lumpiang Shanghai is a type of Filipino egg roll. 
+                        The basic filling is composed of ground pork along with minced onions,
+                        carrots, eggs, and seasonings such as salt and ground black pepper. 
+                        wrapped in a spring roll wrapper
+                        
+
+                    </p>
+                </div>
+           
+               
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="friedSiken" data-name="Friend Siken" data-price="230" data-img="images/friedChicken.jpg">
+                
+                <h1>Fried Siken</h1>
+                <img src="images/friedChicken.jpg">
+                <p>
+                    PRICE: <strong>₱230.00</strong>
+                </p>
+                <div id="friedSikenDesc" class="item-description"> 
+                    <p>
+                        The everyone's all time favorite the Fried Chicken.
+                        This dish is composed of Chicken, buttermilk, flour, 
+                        paprika, salt and pepper, and Vegetable oil made into perfection.
+                    </p>
+                </div>
+           
+              
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="item" id="pares" data-name="Pares" data-price="120" data-img="images/pares.jpg">
+                
+                <h1>Pares</h1>
+                <img src="images/pares.jpg">
+                <p>
+                    PRICE: <strong>₱120.00</strong>
+                </p>
+                <div id="paresDesc" class="item-description"> 
+                    <p>
+                        Pares or Beef Pares is are cubed beef briskets cooked with spices and tenderized to perfection.
+                        The aroma of this dish alone is enticing. The taste is captivating.
+                        You will surely ask for more after tasting it.
+                        <br><br>
+                        This dish is composed of Beef, beef cubes, star anise, brown sugar, scallions, ginger,
+                        soy sauce, onion, garlic cloves, 2 ¹/₂ cups water, cooking oil, salt and ground black pepper to taste
+                    </p>
+                </div>
+           
+              
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+        </div>
+    
+
+        <div id="about">
+            <h1>About</h1>
+            <p>Hi!, Welcome, My name is <span style="color:rgb(141, 1, 1)">Jede Isaiah Maxweil Pega</span>!<br>
+                And this are Filipino Delicacies that are available for Purchase <br>
+                <!--This is most of the starter pack food for fiestas! <br>
+                which is commonly seen on the table, on fiestas!<br> -->
+            </p>
+            
+        </div>
+
+       <footer id="ct">
+        <a href="#" class="logo">Food Fiesta</a>
+
+        <div id="mediaLinks">
+        <a href="https://www.facebook.com/PogiNah/" id="fb">
+            <img src="images/fbLogo.png">
+        </a>
+        <a href="https://www.instagram.com/jim0___/?hl=en" id="insta">
+            <img src="images/instagramLogo.png">
+        </a>
+        <a href src="mailto:jedemaxwell@gmail.com" id="gmail">
+            <img src="images/gmailLogo.png">
+        </a>
+        </div>
+
+        <div id="contact" class="contactNo.">
+
+            <p>Contact No. 1 : 0915 283 9031</p>
+            <p>Contact No. 2 : 0976 290 3716</p>
+
+        </div>
+       </footer>
+
+     
+        <script src="index.js"></script>
+    </body>
+</html>
