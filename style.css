@@ -1709,10 +1709,309 @@ font-family:Georgia, 'Times New Roman', Times, serif;
     display:block;
 }
 
+#bSeller {
+    position: relative;
+    top: 145rem;
+    left:32rem;
+    width: 500px;
+    height: 50px;
+    background-color: #ffffff63;
+    text-align: center;
+    border-style: solid;
+    border-radius: 8px;
+    font-family: 'pOne', sans-serif;
+    text-shadow: #78a6e2 -5px 5px 5px;
+    box-shadow: #218838 -5px 5px 5px;
+}
+#bSeller h1 {
+    font-weight: 900;
+    font-style: oblique;
+    color:rgb(0, 0, 0);
+    border-style: solid;
+}
+
+#best-seller {
+    position:absolute;
+    display:inline-block;
+    top:160rem;
+    left: 0;
+}
+#pusitSisig {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    left: -30px;
+    top: 39px;
+}
+
+#pusitSisig a {
+    color:black;
+}
+
+#pusitSisig h1 {
+    position:absolute; 
+    left:100px;
+    top:-40px;
+    width: 23.75rem;
+    text-align: center;
+    border-style:outset solid;
+    border-color: rgb(0, 0, 0);
+    background:linear-gradient(white, rgb(252, 212, 212)) ;
+    font-family: 'pOne';
+}
+
+#pusitSisig img {
+    position: absolute; 
+    width: 23.75rem;
+    height: 260px;
+    left:6.25rem;
+    top:-0px;
+    border-style:outset;
+    border-color:rgb(0, 0, 0);
+}
+
+#pusitSisig p {
+    position:absolute; 
+    top:255px;
+    left:6.25rem;
+    width:23.75rem;
+    background-color: white;
+    border-style:outset;
+    border-color:rgba(0, 0, 0, 0.685);
+    font-size: larger;
+}
+
+#pusitSisig button {
+    position: absolute;
+    left:15rem;
+    top: 16.2rem;
+    width: 100px;
+    height: 1.3rem;
+    border-radius: 8%;
+    background-color: rgb(99, 42, 165);
+    color: white;
+    transition: background-color 0.5s;
+    font-family: 'pOne', sans-serif;
+}
+
+#pusitSisig button:hover {
+    background-color: aqua;
+    color: black;
+}
+/* item description */
+#pusitSisig #pusitSisigDesc {
+    left: 6.5rem;
+    display: none;
+    position:relative;
+    background-color: rgba(139, 69, 19, 0.322);
+    width: 23.4rem;
+    height: 16rem;
+    z-index: 2;
+    border-radius: 8px;
+    animation-name: animation;
+    animation-duration: 0.5s;
+}
+#pusitSisig #pusitSisigDesc p {
+    position:absolute; 
+    top: 0;
+    left:auto;
+    background-color: transparent;
+    border-style: none;
+    width: 100%;
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: 900;
+}
+#pusitSisig:hover #pusitSisigDesc {
+    display:block;
+}
+
+#relyenongBangus {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 30.5rem;
+    top: 2.5rem;
+}
+
+#relyenongBangus a {
+    color:black;
+}
+
+#relyenongBangus h1 {
+    position:absolute; 
+    left:100px;
+    top:-40px;
+    width: 23.75rem;
+    text-align: center;
+    border-style:outset solid;
+    border-color: rgb(0, 0, 0);
+    background:linear-gradient(white, rgb(252, 212, 212)) ;
+    font-family: 'pOne';
+}
+
+#relyenongBangus img {
+    position: absolute; 
+    width: 23.75rem;
+    height: 260px;
+    left:6.25rem;
+    top:-0px;
+    border-style:outset;
+    border-color:rgb(0, 0, 0);
+}
+
+#relyenongBangus p {
+    position:absolute; 
+    top:255px;
+    left:6.25rem;
+    width:23.75rem;
+    background-color: white;
+    border-style:outset;
+    border-color:rgba(0, 0, 0, 0.685);
+    font-size: larger;
+}
+
+#relyenongBangus button {
+    position: absolute;
+    left:15rem;
+    top: 16.2rem;
+    width: 100px;
+    height: 1.3rem;
+    border-radius: 8%;
+    background-color: rgb(99, 42, 165);
+    color: white;
+    transition: background-color 0.5s;
+    font-family: 'pOne', sans-serif;
+}
+
+#relyenongBangus button:hover {
+    background-color: aqua;
+    color: black;
+}
+/* item description */
+#relyenongBangus #relyenongBangusDesc {
+    left: 6.5rem;
+    display: none;
+    position:relative;
+    background-color: rgba(139, 69, 19, 0.322);
+    width: 23.4rem;
+    height: 16rem;
+    z-index: 2;
+    border-radius: 8px;
+    animation-name: animation;
+    animation-duration: 0.5s;
+}
+#relyenongBangus #relyenongBangusDesc p {
+    position:absolute; 
+    top: 0;
+    left:auto;
+    background-color: transparent;
+    border-style: none;
+    width: 100%;
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: 900;
+}
+#relyenongBangus:hover #relyenongBangusDesc {
+    display:block;
+}
+
+
+#bulalo {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 63.5rem;
+    top: 2.5rem;
+}
+
+#bulalo a {
+    color:black;
+}
+
+#bulalo h1 {
+    position:absolute; 
+    left:100px;
+    top:-40px;
+    width: 23.75rem;
+    text-align: center;
+    border-style:outset solid;
+    border-color: rgb(0, 0, 0);
+    background:linear-gradient(white, rgb(252, 212, 212)) ;
+    font-family: 'pOne';
+}
+
+#bulalo img {
+    position: absolute; 
+    width: 23.75rem;
+    height: 260px;
+    left:6.25rem;
+    top:-0px;
+    border-style:outset;
+    border-color:rgb(0, 0, 0);
+}
+
+#bulalo p {
+    position:absolute; 
+    top:255px;
+    left:6.25rem;
+    width:23.75rem;
+    background-color: white;
+    border-style:outset;
+    border-color:rgba(0, 0, 0, 0.685);
+    font-size: larger;
+}
+
+#bulalo button {
+    position: absolute;
+    left:15rem;
+    top: 16.2rem;
+    width: 100px;
+    height: 1.3rem;
+    border-radius: 8%;
+    background-color: rgb(99, 42, 165);
+    color: white;
+    transition: background-color 0.5s;
+    font-family: 'pOne', sans-serif;
+}
+
+#bulalo button:hover {
+    background-color: aqua;
+    color: black;
+}
+/* item description */
+#bulalo #bulaloDesc {
+    left: 6.5rem;
+    display: none;
+    position:relative;
+    background-color: rgba(139, 69, 19, 0.322);
+    width: 23.4rem;
+    height: 16rem;
+    z-index: 2;
+    border-radius: 8px;
+    animation-name: animation;
+    animation-duration: 0.5s;
+}
+#bulalo #bulaloDesc p {
+    position:absolute; 
+    top: 0;
+    left:auto;
+    background-color: transparent;
+    border-style: none;
+    width: 100%;
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: 900;
+}
+#bulalo:hover #bulaloDesc {
+    display:block;
+}
+
+
 #about {
     position:relative;
     display:inline-block;
-    top:150rem;
+    top:175rem;
     left: 0px;
     width: 100%;
 }
@@ -1746,8 +2045,10 @@ font-family:Georgia, 'Times New Roman', Times, serif;
     border-radius: 5px;
     border-style: solid;
     border-color: rgb(33, 48, 0);
-    top: 150rem;
+    top: 175rem;
     gap: 10px;
+    width: 100%;
+   
 }
 
 #ct #fb img {
